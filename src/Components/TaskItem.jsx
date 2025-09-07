@@ -9,14 +9,16 @@ const Taskitem = ( {task, toggleComplete, deleteTask} )  => {
             >
           {task.text}
             </span>
-
+ 
             <button
               onClick = { ()=> deleteTask(task.id)}
             >
-
+                  Delete
             </button>
 
         </div>
     )
 
 }
+
+export default Taskitem
