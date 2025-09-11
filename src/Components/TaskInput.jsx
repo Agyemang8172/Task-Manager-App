@@ -2,17 +2,17 @@ import React, { useState } from 'react'
 
 const TaskInput = ({ addTask }) => { 
       const [inputValue,setInputValue]  = useState("")
-
+ 
       const handleSubmit = (e)  =>  {
          e.preventDefault()
          if ( inputValue.trim())    {
             addTask(inputValue)
             setInputValue("")
-         } 
+            } 
           }
 
-      }
-  return (
+     
+  return (   
     <form  onSubmit={handleSubmit}>
         <input  
          type="text"
@@ -26,7 +26,6 @@ const TaskInput = ({ addTask }) => {
         </button>
 
     </form>
-  )
-
-
+    )  
+}
 export default TaskInput
